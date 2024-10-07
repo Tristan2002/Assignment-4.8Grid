@@ -1,0 +1,174 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+
+body {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: 
+    'navTag navTag'
+    'asideImageTag asideSectionTag'
+    'ingredientsTag utensilsTag'
+    'mainTag mainTag'
+    'footerTag footerTag';
+}
+
+/* MAINMENU */
+#mainmenu {
+    grid-area: navTag;
+    margin: 0 0 2% 0;
+}
+#mainmenu > a {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#mainmenu > a > img {
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+#mainmenu > ul {
+    line-height: 7em;
+    float: right;
+    text-align: center;
+    margin-right: 20px;
+}
+#mainmenu > ul > li {
+    display: inline;
+    font-size: 20px;
+    margin: 10px;
+}
+#mainmenu > ul > li > a {
+    text-decoration: none;
+}
+.nav {
+    color: black;
+}
+.nav:hover {
+    color: purple;
+}
+#contact {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+#contact:hover {
+    color: lightgrey;
+}
+
+/* RECEPT ASIDE */
+#recipe_aside {
+    width: 70%;
+    margin: 2% auto;
+}
+#recipe_aside > #recipe_aside_image { 
+    grid-area: asideImageTag;
+	width:45%;
+}
+#recipe_aside > #recipe_aside_section {
+    grid-area: asideSectionTag;
+    width: 45%;
+    margin-left: 5%;
+}
+#recipe_aside > #recipe_aside_section > h1 {
+    font-size: 3em;
+}
+#recipe_aside > #recipe_aside_section > h2 {
+    font-size: 20px;
+}
+#recipe_aside > #recipe_aside_section > h3 {
+    font-size: 20px;
+    color: gray;
+}
+#recipe_aside > #recipe_aside_section > p {
+    font-size: 20px;
+    padding: 2%;
+    border: gray solid 1px;
+    border-radius: 10px;
+}
+
+/* RECIPE INGREDIENTS */
+#recipe_ingredients {
+    justify-content: space-between;
+    width: 70%;
+    margin: 2% auto;
+    padding: 2%;
+    border: gray solid 1px;
+    border-radius: 10px;
+}
+#recipe_ingredients > #recipe_ingredients_ingredients {
+    grid-area: ingredientsTag;
+}
+#recipe_ingredients > #recipe_ingredients_utensils {
+    grid-area: utensilsTag;
+}
+#recipe_ingredients > #recipe_ingredients_ingredients,
+#recipe_ingredients > #recipe_ingredients_utensils {
+    width: 40%;
+}
+#recipe_ingredients > #recipe_ingredients_ingredients > h1,
+#recipe_ingredients > #recipe_ingredients_utensils > h1 {
+    font-size: 2em;
+}
+#recipe_ingredients > #recipe_ingredients_ingredients > ul > li,
+#recipe_ingredients > #recipe_ingredients_utensils > ul > li {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+/* MAIN content */
+main {
+    grid-area: mainTag;
+    width: 70%;
+    margin: 2% auto;
+}
+main > .main_article {
+    width: 50%;
+    float: left;
+}
+main > .main_article > ol > li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Company Footer */
+#company_footer {
+    grid-area: footerTag;
+}
+#company_footer_section_1 {
+    width: 30%;
+    float: left;
+}
+#company_footer_section_2 {
+    width: 70%;
+    float: left;
+}
+#company_footer_section_2 > aside {
+    width: 30%;
+    float: left;
+}
+#company_footer_section_2 > article {
+    width: 30%;
+    float: left;
+}
+#company_footer_section_2 > section {
+    width: 40%;
+    float: left;
+}
+#company_footer_section_2 > section > a > img {
+    width: 20%;
+    margin: 5%;
+}
