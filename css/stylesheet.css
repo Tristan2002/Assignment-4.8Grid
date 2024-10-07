@@ -5,13 +5,13 @@
     background-color: #FFF;
 }
 
+img {
+    width: 100px;
+}
+
 body {
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-img {
-    width: 100px;
 }
 
 #grid-container {
@@ -19,7 +19,7 @@ img {
     grid-template-areas: 
     'navTag navTag'
     'asideImageTag asideSectionTag'
-    'ingredientsTag utensilsTag'
+    'ingredientsTag ingredientsTag'
     'mainTag mainTag'
     'footerTag footerTag';
 }
@@ -73,27 +73,29 @@ img {
 #recipe_aside {
     width: 70%;
     margin: 2% auto;
+
 }
-#recipe_aside > #recipe_aside_image { 
+#recipe_aside_image { 
     grid-area: asideImageTag;
-	width:45%;
 }
-#recipe_aside > #recipe_aside_section {
+#recipe_aside_image > img {
+    width: 100%;
+}
+#recipe_aside_section {
     grid-area: asideSectionTag;
-    width: 45%;
     margin-left: 5%;
 }
-#recipe_aside > #recipe_aside_section > h1 {
+#recipe_aside_section > h1 {
     font-size: 3em;
 }
-#recipe_aside > #recipe_aside_section > h2 {
+#recipe_aside_section > h2 {
     font-size: 20px;
 }
-#recipe_aside > #recipe_aside_section > h3 {
+#recipe_aside_section > h3 {
     font-size: 20px;
     color: gray;
 }
-#recipe_aside > #recipe_aside_section > p {
+#recipe_aside_section > p {
     font-size: 20px;
     padding: 2%;
     border: gray solid 1px;
@@ -102,6 +104,8 @@ img {
 
 /* RECIPE INGREDIENTS */
 #recipe_ingredients {
+    grid-area: ingredientsTag;
+    display: flex;
     justify-content: space-between;
     width: 70%;
     margin: 2% auto;
@@ -109,22 +113,18 @@ img {
     border: gray solid 1px;
     border-radius: 10px;
 }
-#recipe_ingredients > #recipe_ingredients_ingredients {
-    grid-area: ingredientsTag;
+#recipe_ingredients_ingredients,
+#recipe_ingredients_utensils {
+    width: 45%;
 }
-#recipe_ingredients > #recipe_ingredients_utensils {
-    grid-area: utensilsTag;
-}
-#recipe_ingredients > #recipe_ingredients_ingredients,
-#recipe_ingredients > #recipe_ingredients_utensils {
-    width: 40%;
-}
-#recipe_ingredients > #recipe_ingredients_ingredients > h1,
-#recipe_ingredients > #recipe_ingredients_utensils > h1 {
+
+#recipe_ingredients_ingredients > h1,
+#recipe_ingredients_utensils > h1 {
     font-size: 2em;
 }
-#recipe_ingredients > #recipe_ingredients_ingredients > ul > li,
-#recipe_ingredients > #recipe_ingredients_utensils > ul > li {
+
+#recipe_ingredients_ingredients > ul > li,
+#recipe_ingredients_utensils > ul > li {
     font-size: 20px;
     list-style-type: none;
 }
