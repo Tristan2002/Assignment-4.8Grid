@@ -23,34 +23,87 @@ body {
     'mainTag mainTag'
     'footerTag footerTag';
 }
+/* MENU TOGGLE */
+#menu-toggle {
+    display: none;
+}
+.hamburger {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin: 3px;
+}
+.hamburger span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: blueviolet;
+    border-radius: 3px;
+}
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+.hamburger span:nth-child(3) {
+    bottom: 0;
+}
+#menu-toggle:checked ~ .menu {
+    right: 0;
+}
 
 /* MAINMENU */
-#mainmenu {
+.menu {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: aqua;
+    color: black;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    padding: 10px;
+}
+.menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+/* .menu {
     grid-area: navTag;
     margin: 0 0 2% 0;
 }
-#mainmenu > a {
+.menu > a {
     width: 20%;
     height: 100%;
     float: left;
 }
-#mainmenu > a > img {
+.menu > a > img {
     display: block;
     margin: auto;
     height: 100%;
 }
-#mainmenu > ul {
+.menu > ul {
     line-height: 7em;
     float: right;
     text-align: center;
     margin-right: 20px;
 }
-#mainmenu > ul > li {
+.menu > ul > li {
     display: inline;
     font-size: 20px;
     margin: 10px;
 }
-#mainmenu > ul > li > a {
+.menu > ul > li > a {
     text-decoration: none;
 }
 .nav {
@@ -67,7 +120,7 @@ body {
 }
 #contact:hover {
     color: lightgrey;
-}
+} */
 
 /* RECEPT ASIDE */
 #recipe_aside {
