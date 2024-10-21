@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="recept, eten, gerecht">
+    <meta name="description" content="home pagina voor website">
+    <link rel="stylesheet" 
+        type="text/css" 
+        href="css/stylesheet.css"
+        />
+    <meta name="author" content="Tristan de Bruin"> 
+    <title>Home</title>
+</head>
+<body id="contact-container">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav class="menu">
+        <a href="#">
+            <img class="logo" src="img/x.png" alt="" title="" />
+        </a>
+        <ul>
+            <li><a href="#" class="nav">Home</a></li>
+            <li><a href="populair.html" class="nav">Populair</a></li>
+            <li><a href="ontdek.html" class="nav">Ontdek</a></li>
+            <li><a href="about.html" class="nav">Over ons</a></li>
+            <li><a href="contact.html" id="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <img src="img/x.png" alt="" title="" />
+        <form action="contact.html" method="post">
+            <ul class="name">
+                <li>
+                    <label for="name">Naam *</label>
+                </li>
+                <li>
+                    <input type="text" id="name" name="name" placeholder="Naam" required>
+                </li>
+            </ul>
+            <ul class="lastName">
+                <li>
+                    <label for="lastName">Achternaam</label>
+                </li>
+                <li>
+                    <input type="text" id="lastName" name="lastName" placeholder="Achternaam">
+                </li>
+            </ul>
+            <ul class="message">
+                <li>
+                    <ul class="email">
+                        <li>
+                            <label for="email">Email *</label>
+                        </li>
+                        <li>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </li>
+                    </ul>
+                    <label for="message">Bericht *</label>
+                </li>
+                <li>
+                    <textarea id="message" name="message" placeholder="Typ hier uw bericht"></textarea>
+                </li>
+            </ul>
+            <input class="submit" type="submit" value="submit">
+        </form>
+    </main>
+
+    <footer id="company_footer">
+        <section id="company_footer_section_1">
+            <a href="#">
+                <img class="logo" src="img/x.png" alt="" title="" />
+            </a>
+            <p>Your about us..</p>
+            <p>You could also..</p>
+            <a href="#">find out more..</a>
+        </section>
+        <section id="company_footer_section_2">
+            <aside>
+                <header>Twitter feed</header>
+                <p>hey..</p>
+                <p>thanks..</p>
+            </aside>
+            <article>
+                <header>Latest post</header>
+                <p>Your article..</p>
+                <p>This would be..</p>
+            </article>
+            <header>Flickr feed</header>
+            <section>
+                <a href="https://www.flickr.com/#"><img src="img/x.png" alt="" title="" /></a>
+                <a href="https://www.flickr.com/#"><img src="img/x.png" alt="" title="" /></a>
+                <a href="https://www.flickr.com/#"><img src="img/x.png" alt="" title="" /></a>
+                <a href="https://www.flickr.com/#"><img src="img/x.png" alt="" title="" /></a>
+                <a href="https://www.flickr.com/#"><img src="img/x.png" alt="" title="" /></a>
+                <a href="https://www.flickr.com/#"><img src="img/x.png" alt="" title="" /></a>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>

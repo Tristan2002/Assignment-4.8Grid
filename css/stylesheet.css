@@ -12,9 +12,10 @@ img {
 body {
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    position: static;
 }
 
-#grid-container {
+#recept-container {
     display: grid;
     grid-template-areas: 
     'navTag navTag'
@@ -23,104 +24,126 @@ body {
     'mainTag mainTag'
     'footerTag footerTag';
 }
-/* MENU TOGGLE */
-#menu-toggle {
-    display: none;
-}
-.hamburger {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    margin: 3px;
-}
-.hamburger span {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: blueviolet;
-    border-radius: 3px;
-}
-.hamburger span:nth-child(1) {
-    top: 0;
-}
-.hamburger span:nth-child(2) {
-    top: 9px;
-}
-.hamburger span:nth-child(3) {
-    bottom: 0;
-}
-#menu-toggle:checked ~ .menu {
-    right: 0;
+
+#ontdek-container {
+    display: grid;
+    grid-template-areas: 
+    'navTag navTag'
+    'asideImageTag asideSectionTag'
+    'ingredientsTag ingredientsTag'
+    'mainTag mainTag'
+    'footerTag footerTag';
 }
 
-/* MAINMENU */
-.menu {
-    position: absolute;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: aqua;
-    color: black;
+@media screen and (max-width: 768px) {
+    /* MENU TOGGLE */
+    #menu-toggle {
+        display: none;
+    }
+    .hamburger {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin: 3px;
+    }
+    .hamburger span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: blueviolet;
+        border-radius: 3px;
+    }
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+    .hamburger span:nth-child(2) {
+        top: 9px;
+    }
+    .hamburger span:nth-child(3) {
+        bottom: 0;
+    }
+    #menu-toggle:checked ~ .menu {
+        right: 0;
+    }
+
+    /* MAINMENU */
+    .menu {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: aqua;
+        color: black;
+    }
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li {
+        padding: 10px;
+    }
+    .menu ul li a {
+        color: black;
+        text-decoration: none;
+    }
 }
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+
+@media screen and (min-width: 769px) {
+    #menu-toggle,
+    .hamburger{
+        display: none;
+    }
+    
+    /* MAINMENU */
+    .menu {
+        grid-area: navTag;
+        margin: 0 0 2% 0;
+    }
+    .menu > a {
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+    .menu > a > img {
+        display: block;
+        margin: auto;
+        height: 100%;
+    }
+    .menu > ul {
+        line-height: 7em;
+        float: right;
+        text-align: center;
+        margin-right: 20px;
+    }
+    .menu > ul > li {
+        display: inline;
+        font-size: 20px;
+        margin: 10px;
+    }
+    .menu > ul > li > a {
+        text-decoration: none;
+    }
+    .nav {
+        color: black;
+    }
+    .nav:hover {
+        color: purple;
+    }
+    #contact {
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+    #contact:hover {
+        color: lightgrey;
+    }
 }
-.menu ul li {
-    padding: 10px;
-}
-.menu ul li a {
-    color: black;
-    text-decoration: none;
-}
-/* .menu {
-    grid-area: navTag;
-    margin: 0 0 2% 0;
-}
-.menu > a {
-    width: 20%;
-    height: 100%;
-    float: left;
-}
-.menu > a > img {
-    display: block;
-    margin: auto;
-    height: 100%;
-}
-.menu > ul {
-    line-height: 7em;
-    float: right;
-    text-align: center;
-    margin-right: 20px;
-}
-.menu > ul > li {
-    display: inline;
-    font-size: 20px;
-    margin: 10px;
-}
-.menu > ul > li > a {
-    text-decoration: none;
-}
-.nav {
-    color: black;
-}
-.nav:hover {
-    color: purple;
-}
-#contact {
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    padding: 10px 20px;
-}
-#contact:hover {
-    color: lightgrey;
-} */
 
 /* RECEPT ASIDE */
 #recipe_aside {
@@ -188,11 +211,11 @@ main {
     width: 70%;
     margin: 2% auto;
 }
-main > .main_article {
+main > .recipe_article {
     width: 50%;
     float: left;
 }
-main > .main_article > ol > li {
+main > .recipe_article > ol > li {
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -224,4 +247,22 @@ main > .main_article > ol > li {
 #company_footer_section_2 > section > a > img {
     width: 20%;
     margin: 5%;
+}
+
+.card {
+    grid-area: cardTag;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    width: 33%;
+}
+
+#main_dish {
+
+}
+#main_dish > section {
+    display: grid;
+    grid-template-areas: 
+    'cardTag cardTag cardTag';
 }
