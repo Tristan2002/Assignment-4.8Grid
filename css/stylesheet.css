@@ -1,38 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&family=Raleway&display=swap');
+
+:root {
+    --primary-color: #DBF4AD;
+    --primary-color-light: #E6FBC0;
+    --secondary-color: #D0C4DF;
+    --secondary-color-light: #D9D3DF;
+    --accent-color: #499167;
+}
+
 * {
     border: 0;
     margin: 0;
     padding: 0;
     background-color: #FFF;
+    font-size: 16px;
 }
 
 img {
     width: 100px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header {
+    font-family: "Poly", serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2rem;
+}
+
+.large_text {
+    font-size: 20px;
+}
+
 body {
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway", serif;
     position: static;
 }
 
-#recept-container {
+#recipe-container {
     display: grid;
     grid-template-areas: 
-    'navTag navTag'
-    'asideImageTag asideSectionTag'
-    'ingredientsTag ingredientsTag'
-    'mainTag mainTag'
-    'footerTag footerTag';
-}
-
-#ontdek-container {
-    display: grid;
-    grid-template-areas: 
-    'navTag navTag'
-    'asideImageTag asideSectionTag'
-    'ingredientsTag ingredientsTag'
-    'mainTag mainTag'
-    'footerTag footerTag';
+    'navTag'
+    'asideTag'
+    'ingredientsTag'
+    'mainTag'
+    'footerTag';
 }
 
 @media screen and (max-width: 768px) {
@@ -101,10 +129,12 @@ body {
     
     /* MAINMENU */
     .menu {
+        background-color: var(--primary-color);
         grid-area: navTag;
         margin: 0 0 2% 0;
     }
     .menu > a {
+        background-color: var(--primary-color);
         width: 20%;
         height: 100%;
         float: left;
@@ -115,6 +145,7 @@ body {
         height: 100%;
     }
     .menu > ul {
+        background-color: var(--primary-color);
         line-height: 7em;
         float: right;
         text-align: center;
@@ -124,19 +155,21 @@ body {
         display: inline;
         font-size: 20px;
         margin: 10px;
+        background-color: var(--primary-color);
     }
     .menu > ul > li > a {
+        background-color: var(--primary-color);
         text-decoration: none;
     }
     .nav {
         color: black;
     }
     .nav:hover {
-        color: purple;
+        color: var(--secondary-color-light);
     }
     #contact {
-        background-color: black;
-        color: white;
+        background-color: var(--accent-color);
+        color: black;
         border-radius: 10px;
         padding: 10px 20px;
     }
@@ -149,51 +182,49 @@ body {
 #recipe_aside {
     width: 70%;
     margin: 2% auto;
-
+    grid-area: asideTag;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2%;
 }
-#recipe_aside_image { 
-    grid-area: asideImageTag;
+#recipe_aside_image {
+    grid-column: 1;
 }
 #recipe_aside_image > img {
     width: 100%;
 }
 #recipe_aside_section {
-    grid-area: asideSectionTag;
-    margin-left: 5%;
-}
-#recipe_aside_section > h1 {
-    font-size: 3em;
-}
-#recipe_aside_section > h2 {
-    font-size: 20px;
-}
-#recipe_aside_section > h3 {
-    font-size: 20px;
-    color: gray;
+    grid-column: 2;
+    margin-left: 0;
 }
 #recipe_aside_section > p {
-    font-size: 20px;
     padding: 2%;
     border: gray solid 1px;
     border-radius: 10px;
+    background-color: var(--primary-color-light);
 }
 
 /* RECIPE INGREDIENTS */
 #recipe_ingredients {
     grid-area: ingredientsTag;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
     width: 70%;
     margin: 2% auto;
     padding: 2%;
-    border: gray solid 1px;
+    border-color: gray;
+    border-style: double;
+    border-width: 3px;
     border-radius: 10px;
+    background-color: var(--secondary-color-light);
 }
-#recipe_ingredients_ingredients,
-#recipe_ingredients_utensils {
-    width: 45%;
+#recipe_ingredients > * {
+    background-color: var(--secondary-color-light);
 }
-
+#recipe_ingredients > * > * {
+    background-color: var(--secondary-color-light);
+}
 #recipe_ingredients_ingredients > h1,
 #recipe_ingredients_utensils > h1 {
     font-size: 2em;
@@ -203,6 +234,7 @@ body {
 #recipe_ingredients_utensils > ul > li {
     font-size: 20px;
     list-style-type: none;
+    background-color: var(--secondary-color-light);
 }
 
 /* MAIN content */
@@ -249,20 +281,93 @@ main > .recipe_article > ol > li {
     margin: 5%;
 }
 
+/* discover */
+#discover-container {
+    display: grid;
+    grid-template-areas: 
+    'navTag'
+    'titleTag'
+    'mainTag'
+    'breakfastTag'
+    'lunchTag'
+    'footerTag';
+}
+
 .card {
-    grid-area: cardTag;
     border-radius: 10px;
     border-color: black;
     border-style: solid;
     border-width: 2px;
-    width: 33%;
+    width: 99%;
+    background-color: var(--secondary-color-light);
+}
+.card > * {
+    background-color: var(--secondary-color-light);
+    width: 90%;
+    margin: 0 5%;
+}
+.card > img {
+    margin: 5%;
+    object-fit:cover;
 }
 
+#title {
+    grid-area: titleTag;
+    margin: auto;
+}
+#subtitle {
+    grid-area: subtitleTag;
+    padding: 0 5%;
+}
 #main_dish {
-
+    grid-area: mainTag;
 }
-#main_dish > section {
+#breakfast {
+    grid-area: breakfastTag;
+}
+#lunch {
+    grid-area: lunchTag;
+}
+.recipe_list > * {
+    padding: 0 5%;
+}
+.recipe_list > section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%;
+    margin: 2% 0;
+    padding: 0 10%;
+    background-color: var(--primary-color-light);
+}
+
+/* popular */
+#popular-container {
     display: grid;
     grid-template-areas: 
-    'cardTag cardTag cardTag';
+    'navTag'
+    'titleTag'
+    'subtitleTag'
+    'hightlightTag'
+    'recommendedTag'
+    'footerTag';
+}
+
+#highlight {
+    padding: 0 5%;
+    background-color: var(--primary-color-light);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10%;
+    margin: 2% 0;
+    grid-area: hightlightTag;
+    align-items: center;
+}
+#highlight > *,
+#highlight > * > p,
+#highlight > * > h2 {
+    background-color: var(--primary-color-light);
+}
+
+#recommended {
+    grid-area: recommendedTag;
 }

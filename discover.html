@@ -9,9 +9,9 @@
         href="css/stylesheet.css"
         />
     <meta name="author" content="Tristan de Bruin"> 
-    <title>Home</title>
+    <title>Ontdek</title>
 </head>
-<body id="ontdek-container">
+<body id="discover-container">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="hamburger">
         <span></span>
@@ -19,40 +19,40 @@
         <span></span>
     </label>
     <nav class="menu">
-        <a href="#">
+        <a href="index.html">
             <img class="logo" src="img/x.png" alt="" title="" />
         </a>
         <ul>
-            <li><a href="#" class="nav">Home</a></li>
-            <li><a href="populair.html" class="nav">Populair</a></li>
-            <li><a href="ontdek.html" class="nav">Ontdek</a></li>
+            <li><a href="index.html" class="nav">Home</a></li>
+            <li><a href="popular.html" class="nav">Populair</a></li>
+            <li><a href="discover.html" class="nav">Ontdek</a></li>
             <li><a href="about.html" class="nav">Over ons</a></li>
             <li><a href="contact.html" id="contact">Contact</a></li>
         </ul>
     </nav>
 
-    <h1>Ontdek</h1>
-    <aside id="main_dish">
+    <h1 id="title">Ontdek</h1>
+    <aside id="main_dish" class="recipe_list">
         <h2>Hoofdgerecht</h2>
         <p>Een hoofdgerecht is de belangrijkste en grootste gang van een maaltijd, vaak bestaande uit vlees, vis of een vegetarische optie met bijgerechten.</p>
         <section>
             <article class="card">
-                <img src="img/x.png" alt="" title="">
-                <h3>Kip Tikka Masala</h3>
+                <img src="img/kip-tikka-masala.jpg" alt="" title="">
+                <header class="large_text">Kip Tikka Masala</header>
                 <p>45 min</p>
                 <p>Hoofdgerecht, glutenvrij</p>
-                <p>Een populaire Indiase klassieker met malse kipfilet in een rijke, romige tomatencurry, op smaak gebracht met een mengsel van specerijen. Perfect om te serveren met rijst of naanbrood.</p>
+                <p>Een populare Indiase klassieker met malse kipfilet in een rijke, romige tomatencurry, op smaak gebracht met een mengsel van specerijen. Perfect om te serveren met rijst of naanbrood.</p>
             </article>
             <article class="card">
-                <img src="img/x.png" alt="" title="">
-                <h3>Romige Kip met Champignons en Spinazie</h3>
+                <img src="img/kip-spinazie-champignons.jpg" alt="" title="">
+                <header class="large_text">Romige Kip met Champignons en Spinazie</header>
                 <p>25-35 min</p>
                 <p>Hoofdgerecht, koolhydraatarm, glutenvrij</p>
                 <p>Romige kip met champignons en spinazie is een snel en smaakvol gerecht, met malse kip in een romige saus van champignons en knoflook, perfect voor een glutenvrij en koolhydraatarm diner.</p>
             </article>
             <article class="card">
-                <img src="img/x.png" alt="" title="">
-                <h3>Zoete Aardappel Curry</h3>
+                <img src="img/zoete-aardappel-curry.jpg" alt="" title="">
+                <header class="large_text">Zoete Aardappel Curry</header>
                 <p>40 min</p>
                 <p>Hoofdgerecht, vegan, glutenvrij</p>
                 <p>Een rijke en kruidige curry met zachte zoete aardappelblokjes, kokosmelk en linzen. Heerlijk verwarmend en voedzaam, ideaal voor een snelle doordeweekse maaltijd.</p>
@@ -60,20 +60,20 @@
         </section>
     </aside>
 
-    <aside>
+    <aside id="breakfast" class="recipe_list">
         <h2>Ontbijt</h2>
         <p>Ontbijt is de eerste maaltijd van de dag, bedoeld om energie en voedingsstoffen aan te vullen na de nacht, vaak met brood, granen, fruit of zuivel.</p>
         <section>
-            <article>
-                <img src="img/x.png" alt="" title="">
-                <h3>Spinazie Frittata</h3>
+            <article class="card">
+                <img src="img/spinazie-frittata.jpg" alt="" title="">
+                <header class="large_text">Spinazie Frittata</header>
                 <p>30 min</p>
                 <p>Ontbijt, vegan, glutenvrij</p>
                 <p>Een luchtige omelet gevuld met verse spinazie, ui en Parmezaanse kaas. Perfect als gezond ontbijt of brunch, boordevol eiwitten en vitamines.</p>
             </article>
-            <article>
-                <img src="img/x.png" alt="" title="">
-                <h3>Gegrilde Zalm met Citroen en Dille</h3>
+            <article class="card">
+                <img src="img/gegridle-zalm-met-citroen-en-dille.jpg" alt="" title="">
+                <header class="large_text">Gegrilde Zalm met Citroen en Dille</header>
                 <p>20 min</p>
                 <p>Hoofdgerecht, pescotarisch, glutenvrij</p>
                 <p>Mals gegrilde zalmfilets op smaak gebracht met een frisse mix van citroen en dille. Snel en eenvoudig, ideaal voor een lichte en gezonde maaltijd.</p>
@@ -81,13 +81,13 @@
         </section>
     </aside>
 
-    <aside>
+    <aside id="lunch" class="recipe_list">
         <h2>Lunch</h2>
         <p>Lunch is een lichte of middagmaaltijd, vaak tussen 12:00 en 14:00, bedoeld als energieboost voor de rest van de dag.</p>
         <section>
-            <article>
-                <img src="img/x.png" alt="" title="">
-                <h3>Quinoa Salade met Avocado en Kikkererwten</h3>
+            <article class="card">
+                <img src="img/quinoa-salade-met-kikkererwten.jpg" alt="" title="">
+                <header class="large_text">Quinoa Salade met Avocado en Kikkererwten</header>
                 <p>25 min</p>
                 <p>Lunch, vegan, glutenvrij</p>
                 <p>Een frisse salade met voedzame quinoa, romige avocado, en knapperige kikkererwten, geserveerd met een citroen-mosterddressing. Een lichte maar vullende optie voor lunch of diner.</p>

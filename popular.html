@@ -9,9 +9,9 @@
         href="css/stylesheet.css"
         />
     <meta name="author" content="Tristan de Bruin"> 
-    <title>Home</title>
+    <title>Populair</title>
 </head>
-<body id="grid-container">
+<body id="popular-container">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="hamburger">
         <span></span>
@@ -19,32 +19,30 @@
         <span></span>
     </label>
     <nav class="menu">
-        <a href="#">
+        <a href="index.html">
             <img class="logo" src="img/x.png" alt="" title="" />
         </a>
         <ul>
-            <li><a href="#" class="nav">Home</a></li>
-            <li><a href="populair.html" class="nav">Populair</a></li>
-            <li><a href="ontdek.html" class="nav">Ontdek</a></li>
+            <li><a href="index.html" class="nav">Home</a></li>
+            <li><a href="popular.html" class="nav">Populair</a></li>
+            <li><a href="discover.html" class="nav">Ontdek</a></li>
             <li><a href="about.html" class="nav">Over ons</a></li>
             <li><a href="contact.html" id="contact">Contact</a></li>
         </ul>
     </nav>
 
-    <main>
-        <h1>Populaire recepten</h1>
-        <p>Ontdek onze meest populaire gerechten! Van snelle, doordeweekse maaltijden tot verfijnde klassiekers voor speciale gelegenheden. Elk gerecht is geliefd bij onze community en zorgvuldig samengesteld om jou te inspireren in de keuken. Probeer ze uit en geniet van heerlijke, eenvoudig te volgen recepten die elke keer een succes zijn!</p>
-    </main>
+    <h1 id="title">Populaire recepten</h1>
+    <p id="subtitle">discover onze meest populare gerechten! Van snelle, doordeweekse maaltijden tot verfijnde klassiekers voor speciale gelegenheden. Elk gerecht is geliefd bij onze community en zorgvuldig samengesteld om jou te inspireren in de keuken. Probeer ze uit en geniet van heerlijke, eenvoudig te volgen recepten die elke keer een succes zijn!</p>
 
-    <article>
+    <article id="highlight">
         <section>
             <h2>Highlight</h2>
-            <p>Probeer ons meest populaire gerecht en ontdek waarom het zo geliefd is! Met een perfecte balans van smaakvolle ingrediënten en een eenvoudige bereiding, is dit gerecht een favoriet bij velen. Of je nu voor een snelle maaltijd gaat of iets speciaals wilt serveren, dit recept zorgt gegarandeerd voor een heerlijke culinaire ervaring. Smakelijk!</p>
+            <p>Probeer ons meest populare gerecht en discover waarom het zo geliefd is! Met een perfecte balans van smaakvolle ingrediënten en een eenvoudige bereiding, is dit gerecht een favoriet bij velen. Of je nu voor een snelle maaltijd gaat of iets speciaals wilt serveren, dit recept zorgt gegarandeerd voor een heerlijke culinaire ervaring. Smakelijk!</p>
         </section>
         <section>
-            <article>
-                <img src="img/x.png" alt="" title="">
-                <h3>Romige Kip met Champignons en Spinazie</h3>
+            <article class="card">
+                <img src="img/kip-spinazie-champignons.jpg" alt="" title="">
+                <header class="large_text">Romige Kip met Champignons en Spinazie</header>
                 <p>25-35 min</p>
                 <p>Hoofdgerecht, koolhydraatarm, glutenvrij</p>
                 <p>Romige kip met champignons en spinazie is een snel en smaakvol gerecht, met malse kip in een romige saus van champignons en knoflook, perfect voor een glutenvrij en koolhydraatarm diner.</p>
@@ -52,27 +50,27 @@
         </section>
     </article>
 
-    <aside>
+    <aside id="recommended" class="recipe_list">
         <h2>Aangeraden recepten</h2>
         <p>Hier zijn 3 recepten die ik persoonlijk kan aanraden!</p>
         <section>
-            <article>
-                <img src="img/x.png" alt="" title="">
-                <h3>Kip Tikka Masala</h3>
+            <article class="card">
+                <img src="img/kip-tikka-masala.jpg" alt="" title="">
+                <header class="large_text">Kip Tikka Masala</header>
                 <p>45 min</p>
                 <p>Hoofdgerecht, glutenvrij</p>
-                <p>Een populaire Indiase klassieker met malse kipfilet in een rijke, romige tomatencurry, op smaak gebracht met een mengsel van specerijen. Perfect om te serveren met rijst of naanbrood.</p>
+                <p>Een populare Indiase klassieker met malse kipfilet in een rijke, romige tomatencurry, op smaak gebracht met een mengsel van specerijen. Perfect om te serveren met rijst of naanbrood.</p>
             </article>
-            <article>
-                <img src="img/x.png" alt="" title="">
-                <h3>Romige Kip met Champignons en Spinazie</h3>
+            <article class="card">
+                <img src="img/kip-spinazie-champignons.jpg" alt="" title="">
+                <header class="large_text">Romige Kip met Champignons en Spinazie</header>
                 <p>25-35 min</p>
                 <p>Hoofdgerecht, koolhydraatarm, glutenvrij</p>
                 <p>Romige kip met champignons en spinazie is een snel en smaakvol gerecht, met malse kip in een romige saus van champignons en knoflook, perfect voor een glutenvrij en koolhydraatarm diner.</p>
             </article>
-            <article>
-                <img src="img/x.png" alt="" title="">
-                <h3>Zoete Aardappel Curry</h3>
+            <article class="card">
+                <img src="img/zoete-aardappel-curry.jpg" alt="" title="">
+                <header class="large_text">Zoete Aardappel Curry</header>
                 <p>40 min</p>
                 <p>Hoofdgerecht, vegan, glutenvrij</p>
                 <p>Een rijke en kruidige curry met zachte zoete aardappelblokjes, kokosmelk en linzen. Heerlijk verwarmend en voedzaam, ideaal voor een snelle doordeweekse maaltijd.</p>
