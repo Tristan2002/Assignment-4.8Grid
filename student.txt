@@ -1,0 +1,5 @@
+Student name: Tristan de Bruin
+Student number: 728258
+Student class: INF 1A
+GitHub Repository: https://github.com/Tristan2002/Assignment-4.8Grid
+GitHub Pages URL: https://tristan2002.github.io
