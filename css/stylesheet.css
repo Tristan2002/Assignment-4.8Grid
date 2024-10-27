@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
-    line-height: 24px;
     letter-spacing: normal;
     text-indent: 0;
     word-spacing: normal;
@@ -46,6 +45,10 @@ h4 {
     font-size: 2rem;
 }
 
+p {
+    line-height: 24px;
+}
+
 .large_text {
     font-size: 20px;
 }
@@ -68,9 +71,6 @@ body {
 
 @media screen and (max-width: 768px) {
     /* MENU TOGGLE */
-    .mobile_menu {
-        z-index: 9997;
-    }
     #menu-toggle {
         display: none;
     }
@@ -107,7 +107,7 @@ body {
     /* MAINMENU */
     .menu {
         z-index: 9998;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -100%;
         width: 100%;
@@ -207,6 +207,10 @@ body {
         width: 20%;
         height: 100%;
         float: left;
+    }
+    .menu > h3 {
+        float: left;
+        line-height: 7rem;
     }
     .menu > a > img {
         display: block;
@@ -617,11 +621,15 @@ form {
     display: grid;
     justify-items: center;
 }
-form ul {
+fieldset {
     width: 90%;
+
 }
-form > * {
+fieldset > * {
     margin: 2% 0;
+}
+form ul {
+    width: 100%;
 }
 form li {
     list-style-type: none;
@@ -641,9 +649,53 @@ form li {
     height: 70px;
 }
 #submit {
-    width: 90%;
+    width: 100%;
     border: gray solid 1px;
     border-radius: 10px;
     height: 40px;
     background-color: var(--secondary-color);
+}
+
+figcaption {
+    text-transform: uppercase;
+}
+
+#close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+}
+.cookie-btn {
+    padding: 8px 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.cookie-btn:hover {
+    background-color: var(--primary-color);
+}
+#close:target ~ .cookie-banner {
+    display: none;
 }

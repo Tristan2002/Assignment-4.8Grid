@@ -10,6 +10,7 @@
         />
     <meta name="author" content="Tristan de Bruin"> 
     <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
 </head>
 <body id="contact-container">
     <input type="checkbox" id="menu-toggle">
@@ -39,39 +40,42 @@
         </section>
         <section>
             <form action="contact.html" method="post">
-                <ul class="name">
-                    <li>
-                        <label for="name">Naam *</label>
-                    </li>
-                    <li>
-                        <input type="text" id="name" name="name" placeholder="Naam" required>
-                    </li>
-                </ul>
-                <ul class="lastName">
-                    <li>
-                        <label for="lastName">Achternaam</label>
-                    </li>
-                    <li>
-                        <input type="text" id="lastName" name="lastName" placeholder="Achternaam">
-                    </li>
-                </ul>
-                <ul class="email">
-                    <li>
-                        <label for="email">Email *</label>
-                    </li>
-                    <li>
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                    </li>
-                </ul>
-                <ul class="message">
-                    <li>
-                        <label for="message">Bericht *</label>
-                    </li>
-                    <li>
-                        <textarea id="message" name="message" placeholder="Typ hier uw bericht"></textarea>
-                    </li>
-                </ul>
-                <input id="submit" type="submit" value="Verstuur">
+                <fieldset>
+                    <legend>Gebruikersinfo</legend>
+                    <ul class="name">
+                        <li>
+                            <label for="name">Naam *</label>
+                        </li>
+                        <li>
+                            <input type="text" id="name" name="name" placeholder="Naam" required>
+                        </li>
+                    </ul>
+                    <ul class="lastName">
+                        <li>
+                            <label for="lastName">Achternaam</label>
+                        </li>
+                        <li>
+                            <input type="text" id="lastName" name="lastName" placeholder="Achternaam">
+                        </li>
+                    </ul>
+                    <ul class="email">
+                        <li>
+                            <label for="email">Email *</label>
+                        </li>
+                        <li>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </li>
+                    </ul>
+                    <ul class="message">
+                        <li>
+                            <label for="message">Bericht *</label>
+                        </li>
+                        <li>
+                            <textarea id="message" name="message" placeholder="Typ hier uw bericht"></textarea>
+                        </li>
+                    </ul>
+                    <input id="submit" type="submit" value="submit">
+                </fieldset>
             </form>
         </section>
     </section>
